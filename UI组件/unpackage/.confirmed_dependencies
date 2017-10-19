@@ -1,0 +1,14 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"yuji.png",
+			"350c6a2ff2a6ea6220b19316c321d4e0_t01ea4b8f5048058413.jpg",
+			"c91c703c2a1a95abf92e2ab825967ac4_t01b01d152b9852e350.jpg",
+			"4f69a0058bc6f24e3061feaeaed1b04b_t016cda1c7a5426a20e.gif",
+			"e4a68b39af6a7cd46b0db5b42a99b21d_t0159fb03b3c4a0893a.jpg",
+			"fonts/mui.ttf"
+		]
+	}
+}

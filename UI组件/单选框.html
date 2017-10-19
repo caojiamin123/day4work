@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">单选框</h1>
+		</header>
+		<div class="mui-content">
+		   <div class="mui-input-row mui-radio ">
+		       <label>男</label>
+		       <input name="sex" type="radio" value="男" class="sex">
+		   </div>
+		   <div class="mui-input-row mui-radio ">
+		       <label>女</label>
+		       <input name="sex" type="radio" value="女" class="sex">
+		   </div>
+		   <button id="btn" class="mui-btn mui-btn-blue mui-btn-block">确定</button>
+		</div>
+	</body>
+    <script type="text/javascript">
+    	window.onload=function(){
+    		var ainput=document.querySelectorAll(".sex");
+    		var obtn=document.querySelector("#btn");
+    		
+    		obtn.addEventListener('tap',function(){
+    			var sval=null;
+				for(var i=0;i<ainput.length;i++){
+					if(ainput[i].checked){
+						sval=ainput[i].value;
+					}
+				}
+				if(sval==null){
+					mui.toast('请选择性别');
+					return;
+				}
+				mui.toast(sval);
+    		})
+    	}
+    </script>
+</html>

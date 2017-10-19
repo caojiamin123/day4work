@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">复选框</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="mui-input-row mui-checkbox ">
+		        <label>唱歌</label>
+		        <input name="Checkbox" class="hobby" type="checkbox" value="唱歌">
+		    </div>
+		    <div class="mui-input-row mui-checkbox ">
+		        <label>跳舞</label>
+		        <input name="Checkbox" class="hobby" type="checkbox" value="跳舞">
+		    </div>
+		    <div class="mui-input-row mui-checkbox ">
+		        <label>下棋</label>
+		        <input name="Checkbox" class="hobby" type="checkbox" value="下棋">
+		    </div>
+		    <button type="button" id="btn" class="mui-btn mui-btn-blue mui-btn-block">提交</button>
+		</div>
+	</body>
+    <script>
+			window.onload=function(){
+				var ahobby=document.querySelectorAll(".hobby");
+				var obtn=document.querySelector("#btn");
+				
+				obtn.addEventListener('tap',function(){
+					var sval="";
+					for(var i=0;i<ahobby.length;i++){
+						if(ahobby[i].checked){
+							sval=sval+' '+ahobby[i].value;
+						}
+					}
+					if(sval==""){
+						mui.toast('请选择爱好');
+						return;
+					}
+					mui.toast("爱好有: "+sval);
+				})
+		}
+		</script>
+</html>
